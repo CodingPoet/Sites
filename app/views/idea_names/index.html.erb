@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Idea Names</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @idea_names.each do |idea_name| %>
+      <tr>
+        <td><%= idea_name.name %></td>
+        <td><%= idea_name.description %></td>
+        <td><%= idea_name.picture %></td>
+        <td><%= link_to 'Show', idea_name %></td>
+        <td><%= link_to 'Edit', edit_idea_name_path(idea_name) %></td>
+        <td><%= link_to 'Destroy', idea_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idea name', new_idea_name_path %>

@@ -1,0 +1,2 @@
+module IdeaNamesHelper
+end
